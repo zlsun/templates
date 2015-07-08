@@ -8,6 +8,5 @@
 
 module %FILE% where
 
-
 %HERE%
 

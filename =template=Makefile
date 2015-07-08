@@ -1,9 +1,31 @@
-#
-# %FFILE%
-# %USER%, %FDATE%
-#
 
-all:
-	%HERE%@echo "%FFILE% needs your attention"
+# Flags
+
+# CPPFLAGS  := -I .
+# CFLAGS    := -Wall
+# CXXFLAGS  := -Wall -std=c++11
+# LDFLAGS   :=
+# LDLIBS    := -lm
+# LOADLIBES := -L .
+
+# PHONYs
+
+.PHONY: all clean rebuild run
+
+all: main
+
+clean:
+	rm -f *.o main
+
+rebuild:
+	make --no-print-directory clean
+	make --no-print-directory
+
+run: main
+	./$<
+
+# Dependencies
+
+main: main.o
 
 

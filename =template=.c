@@ -7,6 +7,5 @@
 
 #include "%FILE%.h"
 
-
 %HERE%
 
