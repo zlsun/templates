@@ -1,10 +1,4 @@
-#! /usr/bin/env runhugs +l
---
--- %FFILE%
--- Copyright (C) %YEAR% %USER% <%MAIL%>
---
--- Distributed under terms of the %LICENSE% license.
---
+#!/usr/bin/env runhaskell
 
 module %FILE% where
 
