@@ -1,6 +1,8 @@
 
 # Flags
 
+MAKE := make --no-print-directory
+
 # CPPFLAGS  := -I .
 # CFLAGS    := -Wall
 # CXXFLAGS  := -Wall -std=c++11
@@ -8,24 +10,24 @@
 # LDLIBS    := -lm
 # LOADLIBES := -L .
 
-# PHONYs
+main := main
 
+# PHONYs
 .PHONY: all clean rebuild run
 
-all: main
+all: $(main)
 
 clean:
-	rm -f *.o main
+	$(RM) *.o $(main)
 
 rebuild:
-	make --no-print-directory clean
-	make --no-print-directory
+	$(MAKE) clean
+	$(MAKE)
 
-run: main
+run: $(main)
 	./$<
 
 # Dependencies
 
-main: main.o
-
+$(main): $(main).o
 
